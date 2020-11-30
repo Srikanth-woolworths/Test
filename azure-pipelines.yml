@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'Azure_Tosca_Integration'
+  vmImage: 'ubuntu-latest'
 
 steps:
 - script: '"I:\Srikanth\Azure_Tosca\Client\ToscaCIClient.exe" -m local -c "I:\Srikanth\Azure_Tosca\configCI.xml" -t junit -r "C:\Tosca_Projects\result.xml"'
