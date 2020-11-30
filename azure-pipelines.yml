@@ -17,6 +17,6 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '**/TEST-*.xml'
+    testResultsFiles: '**/result*.xml'
     failTaskOnFailedTests: true
     testRunTitle: 'Publish TOSCA Results'
