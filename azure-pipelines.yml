@@ -18,5 +18,6 @@ steps:
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/result*.xml'
+    searchFolder: 'C:\Tosca_Projects\'
     failTaskOnFailedTests: true
     testRunTitle: 'Publish TOSCA Results'
