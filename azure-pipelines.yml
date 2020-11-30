@@ -7,13 +7,13 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'Azure_Tosca_Integration'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- script: '"I:\Srikanth\Azure_Tosca\Client\ToscaCIClient.exe" -m local -c "I:\Srikanth\Azure_Tosca\configCI.xml" -t junit -r "C:\Tosca_Projects\result.xml"'
+  displayName: 'Execute TOSCA Scripts'
+- task: PublishTestResults@2
+  displayName: 'Publish Results'
+  inputs:
+    failTaskOnFailedTests: true
+    testRunTitle: 'Publish TOSCA Results'
